@@ -24,6 +24,8 @@ aiohttp-socks==0.11.0
     # via matrix-nio
 aiosignal==1.4.0
     # via aiohttp
+aiosqlite==0.22.1
+    # via uv (pyproject.toml)
 annotated-doc==0.0.4
     # via
     #   fastapi
@@ -36,6 +38,8 @@ anyio==4.14.1
     # via
     #   anthropic
     #   httpx
+    #   httpx-ws
+    #   lmstudio
     #   mcp
     #   openai
     #   py-key-value-aio
@@ -45,6 +49,8 @@ anyio==4.14.1
 apscheduler==3.11.3
     # via uv (pyproject.toml)
 argparse==1.4.0
+    # via uv (pyproject.toml)
+asyncio==4.0.0
     # via uv (pyproject.toml)
 atomicwrites==1.4.1
     # via matrix-nio
@@ -65,6 +71,12 @@ beartype==0.22.9
     # via py-key-value-aio
 behave==1.3.3
     # via uv (pyproject.toml)
+bidict==0.23.1
+    # via python-socketio
+blinker==1.9.0
+    # via
+    #   flask
+    #   flask-socketio
 blis==1.3.3
     # via thinc
 brotli==1.2.0
@@ -91,11 +103,15 @@ cffi==2.0.0
     #   cryptography
     #   pynacl
     #   python-olm
+    #   sounddevice
+    #   soundfile
 charset-normalizer==3.4.7
     # via requests
 click==8.4.2
     # via
     #   ddgs
+    #   flask
+    #   flask-socketio
     #   huggingface-hub
     #   textual-dev
     #   typer
@@ -152,6 +168,8 @@ durationpy==0.10
     # via kubernetes
 email-validator==2.3.0
     # via pydantic
+evdev==1.9.3
+    # via pynput
 exceptiongroup==1.3.1
     # via fastmcp-slim
 fake-useragent==2.2.0
@@ -166,6 +184,18 @@ fastmcp-slim==3.4.2
     # via fastmcp
 filelock==3.29.5
     # via huggingface-hub
+flask==3.1.3
+    # via
+    #   uv (pyproject.toml)
+    #   flask-cors
+    #   flask-socketio
+    #   flask-sqlalchemy
+flask-cors==6.0.5
+    # via uv (pyproject.toml)
+flask-socketio==5.6.1
+    # via uv (pyproject.toml)
+flask-sqlalchemy==3.1.1
+    # via uv (pyproject.toml)
 flatbuffers==25.12.19
     # via onnxruntime
 frozenlist==1.8.0
@@ -174,6 +204,12 @@ frozenlist==1.8.0
     #   aiosignal
 fsspec==2026.6.0
     # via huggingface-hub
+gevent==26.5.0
+    # via
+    #   uv (pyproject.toml)
+    #   gevent-websocket
+gevent-websocket==0.10.1
+    # via uv (pyproject.toml)
 gguf==0.19.0
     # via uv (pyproject.toml)
 gitdb==4.0.12
@@ -184,17 +220,21 @@ googleapis-common-protos==1.75.0
     # via opentelemetry-exporter-otlp-proto-grpc
 greenlet==3.5.3
     # via
+    #   gevent
     #   playwright
     #   sqlalchemy
 griffelib==2.1.0
     # via fastmcp-slim
 grpcio==1.81.1
     # via opentelemetry-exporter-otlp-proto-grpc
+gunicorn==26.0.0
+    # via uv (pyproject.toml)
 h11==0.16.0
     # via
     #   httpcore
     #   matrix-nio
     #   uvicorn
+    #   wsproto
 h2==4.3.0
     # via
     #   httpx
@@ -204,7 +244,9 @@ hf-xet==1.5.1
 hpack==4.2.0
     # via h2
 httpcore==1.0.9
-    # via httpx
+    # via
+    #   httpx
+    #   httpx-ws
 httptools==0.8.0
     # via uvicorn
 httpx==0.28.1
@@ -213,12 +255,16 @@ httpx==0.28.1
     #   anthropic
     #   ddgs
     #   fastmcp-slim
+    #   httpx-ws
     #   huggingface-hub
+    #   lmstudio
     #   mcp
     #   openai
     #   weasel
 httpx-sse==0.4.3
     # via mcp
+httpx-ws==0.9.0
+    # via lmstudio
 huggingface-hub==1.21.0
     # via
     #   faster-whisper
@@ -237,7 +283,9 @@ iniconfig==2.3.0
 invoke==3.0.3
     # via paramiko
 itsdangerous==2.2.0
-    # via uv (pyproject.toml)
+    # via
+    #   uv (pyproject.toml)
+    #   flask
 jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.1.2
@@ -252,6 +300,8 @@ jinja2==3.1.6
     # via
     #   uv (pyproject.toml)
     #   aiohttp-jinja2
+    #   flask
+    #   flask-socketio
     #   spacy
     #   textual-serve
 jiter==0.16.0
@@ -278,8 +328,12 @@ kubernetes==36.0.2
     # via uv (pyproject.toml)
 langdetect==1.0.9
     # via uv (pyproject.toml)
+lask==0.3.0
+    # via uv (pyproject.toml)
 linkify-it-py==2.1.0
     # via markdown-it-py
+lmstudio==1.5.0
+    # via uv (pyproject.toml)
 lxml==6.1.1
     # via ddgs
 markdown==3.10.2
@@ -290,7 +344,10 @@ markdown-it-py==4.2.0
     #   rich
     #   textual
 markupsafe==3.0.3
-    # via jinja2
+    # via
+    #   flask
+    #   jinja2
+    #   werkzeug
 matrix-nio==0.25.2
     # via uv (pyproject.toml)
 mcp==1.28.1
@@ -307,6 +364,8 @@ more-itertools==11.1.0
     #   jaraco-functools
 msgpack==1.2.1
     # via textual-dev
+msgspec==0.21.1
+    # via lmstudio
 multidict==6.7.1
     # via
     #   aiohttp
@@ -322,12 +381,18 @@ nodeenv==1.10.0
     # via pyright
 numpy==2.5.0
     # via
+    #   uv (pyproject.toml)
     #   blis
     #   ctranslate2
     #   gguf
     #   onnxruntime
+    #   opencv-python-headless
+    #   pandas
+    #   soundfile
     #   spacy
     #   thinc
+nvidia-ml-py==13.610.43
+    # via pynvml
 oauthlib==3.3.1
     # via requests-oauthlib
 onnxruntime==1.27.0
@@ -336,6 +401,8 @@ openai==2.44.0
     # via uv (pyproject.toml)
 openapi-pydantic==0.5.1
     # via fastmcp-slim
+opencv-python-headless==5.0.0.93
+    # via uv (pyproject.toml)
 opentelemetry-api==1.43.0
     # via
     #   fastmcp-slim
@@ -360,12 +427,15 @@ packaging==26.2
     # via
     #   uv (pyproject.toml)
     #   fastmcp-slim
+    #   gunicorn
     #   huggingface-hub
     #   onnxruntime
     #   pytest
     #   spacy
     #   thinc
     #   weasel
+pandas==3.0.3
+    # via uv (pyproject.toml)
 paramiko==5.0.0
     # via uv (pyproject.toml)
 parse==1.22.1
@@ -449,6 +519,10 @@ pyjwt==2.13.0
     # via mcp
 pynacl==1.6.2
     # via paramiko
+pynput==1.8.2
+    # via uv (pyproject.toml)
+pynvml==13.0.1
+    # via uv (pyproject.toml)
 pyperclip==1.11.0
     # via fastmcp-slim
 pyright==1.1.411
@@ -461,8 +535,10 @@ pytest-asyncio==1.4.0
     # via uv (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via
+    #   uv (pyproject.toml)
     #   aiocron
     #   kubernetes
+    #   pandas
 python-dotenv==1.2.2
     # via
     #   uv (pyproject.toml)
@@ -470,6 +546,10 @@ python-dotenv==1.2.2
     #   fastmcp-slim
     #   pydantic-settings
     #   uvicorn
+python-engineio==4.13.3
+    # via python-socketio
+python-json-logger==4.1.0
+    # via uv (pyproject.toml)
 python-markdown==0.1.0
     # via uv (pyproject.toml)
 python-multipart==0.0.32
@@ -479,8 +559,14 @@ python-multipart==0.0.32
     #   mcp
 python-olm==3.2.16
     # via matrix-nio
+python-socketio==5.16.3
+    # via
+    #   uv (pyproject.toml)
+    #   flask-socketio
 python-socks==2.8.2
     # via aiohttp-socks
+python-xlib==0.33
+    # via pynput
 pyyaml==6.0.3
     # via
     #   uv (pyproject.toml)
@@ -504,6 +590,7 @@ requests==2.34.2
     #   docker
     #   gguf
     #   kubernetes
+    #   lask
     #   requests-oauthlib
     #   spacy
 requests-oauthlib==2.0.0
@@ -530,17 +617,22 @@ secretstorage==3.5.0
 setuptools==82.0.1
     # via
     #   ctranslate2
+    #   lask
     #   spacy
     #   thinc
 shellingham==1.5.4
     # via typer
+simple-websocket==1.1.0
+    # via python-engineio
 six==1.17.0
     # via
     #   behave
     #   kubernetes
     #   langdetect
     #   parse-type
+    #   pynput
     #   python-dateutil
+    #   python-xlib
 smart-open==8.0.0
     # via weasel
 smmap==5.0.3
@@ -551,6 +643,10 @@ sniffio==1.3.1
     #   openai
 socksio==1.0.0
     # via httpx
+sounddevice==0.5.5
+    # via uv (pyproject.toml)
+soundfile==0.14.0
+    # via uv (pyproject.toml)
 spacy==3.8.14
     # via uv (pyproject.toml)
 spacy-legacy==3.0.12
@@ -560,6 +656,7 @@ spacy-loggers==1.0.5
 sqlalchemy==2.0.51
     # via
     #   uv (pyproject.toml)
+    #   flask-sqlalchemy
     #   sqlmodel
 sqlmodel==0.0.39
     # via uv (pyproject.toml)
@@ -574,6 +671,7 @@ sse-starlette==3.4.5
     #   mcp
 starlette==1.3.1
     # via
+    #   uv (pyproject.toml)
     #   fastapi
     #   fastmcp-slim
     #   mcp
@@ -616,6 +714,7 @@ typing-extensions==4.16.0
     #   fastmcp-slim
     #   grpcio
     #   huggingface-hub
+    #   lmstudio
     #   mcp
     #   openai
     #   opentelemetry-api
@@ -629,6 +728,7 @@ typing-extensions==4.16.0
     #   pyright
     #   pytest-asyncio
     #   referencing
+    #   soundfile
     #   sqlalchemy
     #   sqlmodel
     #   starlette
@@ -686,7 +786,20 @@ websockets==16.0
     # via
     #   fastmcp-slim
     #   uvicorn
+werkzeug==3.1.8
+    # via
+    #   flask
+    #   flask-cors
+    #   flask-socketio
 wrapt==2.2.2
     # via smart-open
+wsproto==1.3.2
+    # via
+    #   httpx-ws
+    #   simple-websocket
 yarl==1.24.2
     # via aiohttp
+zope-event==6.2
+    # via gevent
+zope-interface==8.5
+    # via gevent

@@ -5,9 +5,10 @@ resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
     "python_full_version >= '3.14' and sys_platform != 'win32'",
     "python_full_version == '3.13.*' and sys_platform == 'win32'",
-    "python_full_version < '3.13' and sys_platform == 'win32'",
     "python_full_version == '3.13.*' and sys_platform != 'win32'",
-    "python_full_version < '3.13' and sys_platform != 'win32'",
+    "python_full_version < '3.13' and sys_platform == 'win32'",
+    "python_full_version < '3.13' and sys_platform == 'emscripten'",
+    "python_full_version < '3.13' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
 [[package]]
@@ -194,6 +195,15 @@ wheels = [
 ]
 
 [[package]]
+name = "aiosqlite"
+version = "0.22.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/aiosqlite/0.22.1/aiosqlite-0.22.1.tar.gz", hash = "sha256:043e0bd78d32888c0a9ca90fc788b38796843360c855a7262a532813133a0650" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/aiosqlite/0.22.1/aiosqlite-0.22.1-py3-none-any.whl", hash = "sha256:21c002eb13823fad740196c5a2e9d8e62f6243bd9e7e4a1f87fb5e44ecb4fceb" },
+]
+
+[[package]]
 name = "annotated-doc"
 version = "0.0.4"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -262,6 +272,15 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/argparse/1.4.0/argparse-1.4.0.tar.gz", hash = "sha256:62b089a55be1d8949cd2bc7e0df0bddb9e028faefc8c32038cc84862aefdd6e4" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/argparse/1.4.0/argparse-1.4.0-py2.py3-none-any.whl", hash = "sha256:c31647edb69fd3d465a847ea3157d37bed1f95f19760b11a47aa91c04b666314" },
+]
+
+[[package]]
+name = "asyncio"
+version = "4.0.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/asyncio/4.0.0/asyncio-4.0.0.tar.gz", hash = "sha256:570cd9e50db83bc1629152d4d0b7558d6451bb1bfd5dfc2e935d96fc2f40329b" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/asyncio/4.0.0/asyncio-4.0.0-py3-none-any.whl", hash = "sha256:c1eddb0659231837046809e68103969b2bef8b0400d59cfa6363f6b5ed8cc88b" },
 ]
 
 [[package]]
@@ -408,6 +427,24 @@ dependencies = [
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/behave/1.3.3/behave-1.3.3.tar.gz", hash = "sha256:2b8f4b64ed2ea756a5a2a73e23defc1c4631e9e724c499e46661778453ebaf51" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/behave/1.3.3/behave-1.3.3-py2.py3-none-any.whl", hash = "sha256:89bdb62af8fb9f147ce245736a5de69f025e5edfb66f1fbe16c5007493f842c0" },
+]
+
+[[package]]
+name = "bidict"
+version = "0.23.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/bidict/0.23.1/bidict-0.23.1.tar.gz", hash = "sha256:03069d763bc387bbd20e7d49914e75fc4132a41937fa3405417e1a5a2d006d71" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/bidict/0.23.1/bidict-0.23.1-py3-none-any.whl", hash = "sha256:5dae8d4d79b552a71cbabc7deb25dfe8ce710b17ff41711e13010ead2abfc3e5" },
+]
+
+[[package]]
+name = "blinker"
+version = "1.9.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/blinker/1.9.0/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/blinker/1.9.0/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc" },
 ]
 
 [[package]]
@@ -980,6 +1017,12 @@ wheels = [
 ]
 
 [[package]]
+name = "evdev"
+version = "1.9.3"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/evdev/1.9.3/evdev-1.9.3.tar.gz", hash = "sha256:2c140e01ac8437758fa23fe5c871397412461f42d421aa20241dc8fe8cfccbc9" }
+
+[[package]]
 name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -1105,6 +1148,66 @@ wheels = [
 ]
 
 [[package]]
+name = "flask"
+version = "3.1.3"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "blinker" },
+    { name = "click" },
+    { name = "itsdangerous" },
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "werkzeug" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/flask/3.1.3/flask-3.1.3.tar.gz", hash = "sha256:0ef0e52b8a9cd932855379197dd8f94047b359ca0a78695144304cb45f87c9eb" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/flask/3.1.3/flask-3.1.3-py3-none-any.whl", hash = "sha256:f4bcbefc124291925f1a26446da31a5178f9483862233b23c0c96a20701f670c" },
+]
+
+[[package]]
+name = "flask-cors"
+version = "6.0.5"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "werkzeug" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-cors/6.0.5/flask_cors-6.0.5.tar.gz", hash = "sha256:30c5031552cd59f620ac0c8211dac45b345d3b2df310e7721879e4f46ef9c601" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-cors/6.0.5/flask_cors-6.0.5-py3-none-any.whl", hash = "sha256:68fcf75693e961f3af26683b23c4b9a8fb6b64de17d20d0c37b95e8de7ab2ed8" },
+]
+
+[[package]]
+name = "flask-socketio"
+version = "5.6.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "blinker" },
+    { name = "click" },
+    { name = "flask" },
+    { name = "jinja2" },
+    { name = "python-socketio" },
+    { name = "werkzeug" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-socketio/5.6.1/flask_socketio-5.6.1.tar.gz", hash = "sha256:fe5bd995c3ed4da9a98f335d0d830fa1a19d84a64789f6265642a671fdacaeac" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-socketio/5.6.1/flask_socketio-5.6.1-py3-none-any.whl", hash = "sha256:51a3f71b28b4476c650829607e3a993e076034db6c3cc31f718f0a4b45939d42" },
+]
+
+[[package]]
+name = "flask-sqlalchemy"
+version = "3.1.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "sqlalchemy" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-sqlalchemy/3.1.1/flask_sqlalchemy-3.1.1.tar.gz", hash = "sha256:e4b68bb881802dda1a7d878b2fc84c06d1ee57fb40b874d3dc97dabfa36b8312" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/flask-sqlalchemy/3.1.1/flask_sqlalchemy-3.1.1-py3-none-any.whl", hash = "sha256:4ba4be7f419dc72f4efd8802d69974803c37259dd42f3913b0dcf75c9447e0a0" },
+]
+
+[[package]]
 name = "flatbuffers"
 version = "25.12.19"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -1208,6 +1311,68 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/fsspec/2026.6.0/fsspec-2026.6.0.tar.gz", hash = "sha256:f5bac145310fe30e16e1471bd6840b2d990d609e872251d7e674241822abf01a" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/fsspec/2026.6.0/fsspec-2026.6.0-py3-none-any.whl", hash = "sha256:02e0b71817df9b2169dc30a16832045764def1191b43dcff5bb85bdee212d2a1" },
+]
+
+[[package]]
+name = "gevent"
+version = "26.5.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "cffi", marker = "platform_python_implementation == 'CPython' and sys_platform == 'win32'" },
+    { name = "greenlet", marker = "platform_python_implementation == 'CPython'" },
+    { name = "zope-event" },
+    { name = "zope-interface" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0.tar.gz", hash = "sha256:1655eb04c1e20d71b2aa4a3c7528162dd58ff6cc46a037af1f01f534c80fefba" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:e80ad2a8a1e8bdaa5605e3bf4929e0cebf9ea7b8237c83362f7257698bb14280" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:fe42c037253580a3386fce275f8a2a845e540f5a729916934a732f13d42e72cc" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-manylinux_2_28_ppc64le.whl", hash = "sha256:9f463c7d6f69d13b6fe8e3b832a6175a6e95328a940f38495d25496d1ae8ad88" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-manylinux_2_28_s390x.whl", hash = "sha256:96d5e96b1b14a4c1023dcfcc114533217f13febc3b6169254f23fc18d19fee29" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:bccff69c462e3650a0fd1d4e9cfc8b6effe15f3e9b1cad20a7bb5ce14b057efd" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:f519139354d5ca7625df9ddb1b2ffada885c14abc5b4dbae3682e967ddf79669" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:0bf57df54f1c66273bf3601c2a1e41b12138fe848933718369663bc54f177ca2" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-win_amd64.whl", hash = "sha256:e49ce0de007dfd7412edbc2b5d41cce33b049bb1b7086f50be5a09e601bde603" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp312-cp312-win_arm64.whl", hash = "sha256:5c5ff29495a2eed2a244de8150f21893d6c1b15d8b4b5719ab4bbfa06db1e28f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:9b4d3f34c913d1a6bec6d030365a517f3b527a9773b12e58cf56c3339bbe96e6" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:1d8da4e799431feeb4c9e441ac7431f0baabb9106976790d884289d08ac08359" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-manylinux_2_28_ppc64le.whl", hash = "sha256:51becdb4c30a8f45c1c028ad7a97bf5a1ed141f74b159a31aa9cc6aa1e6263a6" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-manylinux_2_28_s390x.whl", hash = "sha256:c42bbcd3d453b08ad8915fd3feaf3d44a3562cdf1c7b208f9837149711e16d9d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:bd3445e4fbeeb46690ed8efe94b8d1d46b14aa04af8866ae7a8da5997828d1c6" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:b573d5b2826edc705f31f07da6889ad483a6a0d64944ebd8d32205f7c5bf46fb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:4d53b1b28f2082a151bded2850b53f6baed02f742d2a1584029e8bd42d457fb4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-win_amd64.whl", hash = "sha256:23569ce0c254eb821fc3dcfe250843dde8b3180b09bae9e222e41aa3fa4885b7" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp313-cp313-win_arm64.whl", hash = "sha256:40cdcdb2e404b6c82b82a4576bdb33958f23fc2deb0d933e9e022b362001e647" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:75a0050e4b87f08ddee7e56f59e6014cd7fcdc3153046c09a847940515d12c85" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-manylinux_2_28_aarch64.whl", hash = "sha256:fd1a0b83a04e19378d9466ae0ee2b5937cf1d7fbfdcb916b2aea82179a208574" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-manylinux_2_28_ppc64le.whl", hash = "sha256:4c964c15076e76391d523ec24202f579a2535f7e301a40efb1656ae046d3eb69" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-manylinux_2_28_s390x.whl", hash = "sha256:45d5438d1c84da5df7e832434627624709543630977332bb4e2d05ecca362cc9" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-manylinux_2_28_x86_64.whl", hash = "sha256:354f35924113abc954819216c2a6ee16751958c615681e0490946e31b437bd2f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:a47cd2d32f6404212d374ad8014a3491d7477dcf0cc09c5a2308ad6d325fd663" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:032157cebdedb84f2f52cdd980f2f5f2623eed6a8f083aadf44b44c47f628642" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-win_amd64.whl", hash = "sha256:9c414935ba5fc88359110968851d3616f119082c937390d00a1c0f4f59be814f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp314-cp314-win_arm64.whl", hash = "sha256:2a0f5993a04b95a35b3a118b1a58ba272833f9b547b774001dea29f90620882f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-macosx_11_0_universal2.whl", hash = "sha256:2e117df896a2660c9ebd4e2b5afc02dfd6e2ddf9b495e787e67c72d105432b09" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-manylinux_2_28_aarch64.whl", hash = "sha256:af5ffe9c11ffb8a39b6bef2e8b722aa2043ae4980977915c6aa8c68b4bc26e46" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-manylinux_2_28_ppc64le.whl", hash = "sha256:7da34aef7e87c43dd3662e5785e79ed505c01399a7cb42876d2d8925969fd75f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-manylinux_2_28_s390x.whl", hash = "sha256:1c6293a7046bcc6f3d8972a74b19cd7a4cfd02d3881edf0fcf827aa514bd247b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-manylinux_2_28_x86_64.whl", hash = "sha256:d3bde0f140a275b2fa88e4b6516bda85551930e10bc2fd95e18c1b7d11cb780c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-musllinux_1_2_aarch64.whl", hash = "sha256:e29fb4b17d9958ec8cb7f6339a111b29bc23f2c2efbef86189d1248bb4862d17" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-musllinux_1_2_x86_64.whl", hash = "sha256:b2239df2f7570efa03736678f3f053bb1bdd22a8a16cd28a2feb7d32ea5f533f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-win_amd64.whl", hash = "sha256:aae214952fd38d27a42dc416bb70193962ec932384b63445d29bbb5817a1c042" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent/26.5.0/gevent-26.5.0-cp315-cp315-win_arm64.whl", hash = "sha256:f7067564f139e33bf26a31ee3b13d168d76eb99a44b85ced626652b158baa80c" },
+]
+
+[[package]]
+name = "gevent-websocket"
+version = "0.10.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "gevent" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent-websocket/0.10.1/gevent-websocket-0.10.1.tar.gz", hash = "sha256:7eaef32968290c9121f7c35b973e2cc302ffb076d018c9068d2f5ca8b2d85fb0" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gevent-websocket/0.10.1/gevent_websocket-0.10.1-py3-none-any.whl", hash = "sha256:17b67d91282f8f4c973eba0551183fc84f56f1c90c8f6b6b30256f31f66f5242" },
 ]
 
 [[package]]
@@ -1379,6 +1544,18 @@ wheels = [
 ]
 
 [[package]]
+name = "gunicorn"
+version = "26.0.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/gunicorn/26.0.0/gunicorn-26.0.0.tar.gz", hash = "sha256:ca9346f85e3a4aeeb64d491045c16b9a35647abd37ea15efe53080eb8b090baf" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/gunicorn/26.0.0/gunicorn-26.0.0-py3-none-any.whl", hash = "sha256:40233d26a5f0d1872916188c276e21641155111c2853f0c2cd55260aec0d24fc" },
+]
+
+[[package]]
 name = "h11"
 version = "0.16.0"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -1524,6 +1701,21 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/httpx-sse/0.4.3/httpx_sse-0.4.3.tar.gz", hash = "sha256:9b1ed0127459a66014aec3c56bebd93da3c1bc8bb6618c8082039a44889a755d" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/httpx-sse/0.4.3/httpx_sse-0.4.3-py3-none-any.whl", hash = "sha256:0ac1c9fe3c0afad2e0ebb25a934a59f4c7823b60792691f779fad2c5568830fc" },
+]
+
+[[package]]
+name = "httpx-ws"
+version = "0.9.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "httpcore" },
+    { name = "httpx" },
+    { name = "wsproto" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/httpx-ws/0.9.0/httpx_ws-0.9.0.tar.gz", hash = "sha256:797373326f70eec1ae96f6e43ae9f12002fd7d73aee139a4985eaab964338a08" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/httpx-ws/0.9.0/httpx_ws-0.9.0-py3-none-any.whl", hash = "sha256:71640d2fb1bf9a225775015b33cd755cfd4c5f7e21c885192fe3adc4c387b248" },
 ]
 
 [[package]]
@@ -1825,6 +2017,19 @@ dependencies = [
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/langdetect/1.0.9/langdetect-1.0.9.tar.gz", hash = "sha256:cbc1fef89f8d062739774bd51eda3da3274006b3661d199c2655f6b3f6d605a0" }
 
 [[package]]
+name = "lask"
+version = "0.3.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "requests" },
+    { name = "setuptools" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/lask/0.3.0/lask-0.3.0.tar.gz", hash = "sha256:ef7f80a5af0e16bbedf089f7e8a1e7d3a51746c808e45193e338b76111fbeb51" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/lask/0.3.0/lask-0.3.0-py3-none-any.whl", hash = "sha256:4afe968a9681702255434eb1fb19431dc9c0e553eb4a3ec74489aab8b8057805" },
+]
+
+[[package]]
 name = "linkify-it-py"
 version = "2.1.0"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -1834,6 +2039,22 @@ dependencies = [
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/linkify-it-py/2.1.0/linkify_it_py-2.1.0.tar.gz", hash = "sha256:43360231720999c10e9328dc3691160e27a718e280673d444c38d7d3aaa3b98b" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/linkify-it-py/2.1.0/linkify_it_py-2.1.0-py3-none-any.whl", hash = "sha256:0d252c1594ecba2ecedc444053db5d3a9b7ec1b0dd929c8f1d74dce89f86c05e" },
+]
+
+[[package]]
+name = "lmstudio"
+version = "1.5.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "httpx" },
+    { name = "httpx-ws" },
+    { name = "msgspec" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/lmstudio/1.5.0/lmstudio-1.5.0.tar.gz", hash = "sha256:458c34fe1f94a7dcc521d4226b4cee82b8af7ea3da8c40b31bbdac558d9a74d4" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/lmstudio/1.5.0/lmstudio-1.5.0-py3-none-any.whl", hash = "sha256:0b1e5a1cf013744a6ce0a80960204af5bf468dbbb2a505acb4dfb67185fffbe9" },
 ]
 
 [[package]]
@@ -2140,6 +2361,46 @@ wheels = [
 ]
 
 [[package]]
+name = "msgspec"
+version = "0.21.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1.tar.gz", hash = "sha256:2313508e394b0d208f8f56892ca9b2799e2561329de9763b19619595a6c0f72c" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:d4248cf0b6129b7d230eacd493c17cc2d4f3989f3bb7f633a928a85b7dcfa251" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5102c7e9b3acff82178449b85006d96310e690291bb1ea0142f1b24bcb8aabcb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:846758412e9518252b2ac9bffd6f0e54d9ff614f5f9488df7749f81ff5c80920" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:21995e74b5c598c2e004110ad66ec7f1b8c20bf2bcf3b2de8fd9a3094422d3ff" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:6129f0cca52992e898fd5344187f7c8127b63d810b2fd73e36fca73b4c6475ee" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:ef3ec2296248d1f8b9231acb051b6d471dfde8f21819e86c9adaaa9f42918521" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-win_amd64.whl", hash = "sha256:d4ab834a054c6f0cbeef6df9e7e1b33d5f1bc7b86dea1d2fd7cad003873e783d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp312-cp312-win_arm64.whl", hash = "sha256:628aaa35c74950a8c59da330d7e98917e1c7188f983745782027748ee4ca573e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:764173717a01743f007e9f74520ed281f24672c604514f7d76c1c3a10e8edb66" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:344c7cd0eaed1fb81d7959f99100ef71ec9b536881a376f11b9a6c4803365697" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:48943e278b3854c2f89f955ddc6f9f430d3f0784b16e47d10604ee0463cd21f5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a9aa659ebb0101b1cbc31461212b87e341d961f0ab0772aaf068a99e001ec4aa" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:f7b27d1a8ead2b6f5b0c4f2d07b8be1ccfcc041c8a0e704781edebe3ae13c484" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:38fe93e86b61328fe544cb7fd871fad5a27c8734bfda90f65e5dbe288ae50f61" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-win_amd64.whl", hash = "sha256:8bc666331c35fcce05a7cd2d6221adbe0f6058f8e750711413d22793c080ac6a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp313-cp313-win_arm64.whl", hash = "sha256:42bb1241e0750c1a4346f2aa84db26c5ffd99a4eb3a954927d9f149ff2f42898" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:fab48eb45fdbfbdb2c0edfec00ffc53b6b6085beefc6b50b61e01659f9f8757f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:3cb779ea0c35bc807ff941d415875c1f69ca0be91a2e907ab99a171811d86a9a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:68604db36b3b4dd9bf160e436e12798a4738848144cea1aca1cb984011eb160f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3d6b9dc50948eaf65df54d2fd0ff66e6d8c32f116037209ee861810eb9b676cb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:52c5e21930942302394429c5a582ce7e6b62c7f983b3760834c2ce107e0dd6df" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:abbb39d65681fa24ed394e01af3d59d869068324f900c61d06062b7fb9980f2f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-win_amd64.whl", hash = "sha256:5666b1b560b97b6ec2eb3fca8a502298ebac56e13bbca1f88523538ce83d01ea" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314-win_arm64.whl", hash = "sha256:d8b8578e4c83b14ceea4cef0d0b747e31d9330fe4b03b2b2ad4063866a178f93" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:15f523d51c00ebad412213bfe9f06f0a50ec2b93e0c19e824a2d267cabb48ea2" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:4e47390360583ba3d5c6cb44cf0a9f61b0a06a899d3c2c00627cedebb2e2884b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:f60800e6299b798142dc40b0644da77ceac5ea0568be58228417eae14135c847" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5f8e9dfcd98419cf7568808470c4317a3fb30bef0e3715b568730a2b272a20d7" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:92d89dfad13bd1ea640dc3e37e724ed380da1030b272bdf5ecafb983c3ad7c75" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:0d03867786e5d7ba25d666df4b11320c27170f4aeafcb8e3a8b0a50a4fb742ca" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-win_amd64.whl", hash = "sha256:740fbf1c9d59992ca3537d6fbe9ebbf9eaf726a65fbf31448e0ecbc710697a63" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/msgspec/0.21.1/msgspec-0.21.1-cp314-cp314t-win_arm64.whl", hash = "sha256:0d2cc73df6058d811a126ac3a8ad63a4dfa210c82f9cf5a004802eaf4712de90" },
+]
+
+[[package]]
 name = "multidict"
 version = "6.7.1"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -2370,6 +2631,15 @@ wheels = [
 ]
 
 [[package]]
+name = "nvidia-ml-py"
+version = "13.610.43"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/nvidia-ml-py/13.610.43/nvidia_ml_py-13.610.43.tar.gz", hash = "sha256:65437eb73d68d0c62c931ca4d45038472faff03bd0b8729abba4b899f70d60f2" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/nvidia-ml-py/13.610.43/nvidia_ml_py-13.610.43-py3-none-any.whl", hash = "sha256:f13c72698edef492f985cc225f14faafe68ae065a2e407f45bdf6f4b9b43fde8" },
+]
+
+[[package]]
 name = "oauthlib"
 version = "3.3.1"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -2439,6 +2709,25 @@ dependencies = [
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/openapi-pydantic/0.5.1/openapi_pydantic-0.5.1.tar.gz", hash = "sha256:ff6835af6bde7a459fb93eb93bb92b8749b754fc6e51b2f1590a19dc3005ee0d" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/openapi-pydantic/0.5.1/openapi_pydantic-0.5.1-py3-none-any.whl", hash = "sha256:a3a09ef4586f5bd760a8df7f43028b60cafb6d9f61de2acba9574766255ab146" },
+]
+
+[[package]]
+name = "opencv-python-headless"
+version = "5.0.0.93"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93.tar.gz", hash = "sha256:b82f9831daab90b725c7c1ee1b36cb5732c367096ac76d119e64e14eb70d5f3c" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-macosx_13_0_arm64.whl", hash = "sha256:030ca5e0837a2963ab36ef896baa9767eb8d2b83353fb28af5a521e40dd8756f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-macosx_14_0_x86_64.whl", hash = "sha256:1e55af3abfb462eeeabe5c775f12bdb36216d8a93a3583d69e6bd6e1d6ba7d00" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:10818d91510e05c04568ae12b5cd120779c70c01bf897b001a6221fe430df80f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:09a872a157c1376ab922a69bbf22f9a95bcc7b658a9d8b436a60212b02b2eeb4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:840bd717c21e5c11cadadc022a823315ea417f961213d06b4df010e019eb16f4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:ed709fdf9aa0bd1f2ed8549e71d19449b03a675bb581eb292285f6861953be37" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-win32.whl", hash = "sha256:c6bcd96b185975ea240d22cfdb15a1f6d080cc95264cfbe2621f21bb144d89b9" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/opencv-python-headless/5.0.0.93/opencv_python_headless-5.0.0.93-cp37-abi3-win_amd64.whl", hash = "sha256:829717b6a95554f273e49e357cee3b3a2a26b6f4842fbc1bed2b45bdd8f87e0e" },
 ]
 
 [[package]]
@@ -2529,6 +2818,58 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/packaging/26.2/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/packaging/26.2/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e" },
+]
+
+[[package]]
+name = "pandas"
+version = "3.0.3"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "python-dateutil" },
+    { name = "tzdata", marker = "sys_platform == 'emscripten' or sys_platform == 'win32'" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3.tar.gz", hash = "sha256:696a4a00a2a2a35d4e5deb3fc946641b96c944f02230e4f76137fe35d806c4fc" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:fed2ff7fd9779120e388e285fc029bd5cf9490cdd2e4166a9ee22c0e49a9ab09" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:b168fc218fd80a6cbdbdbc1a97ddc7889ed057d7eb45f50d866ceab5f39904c4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:0383c72c75cdcca61a9e116e611143902dbfd08bff356829c2f6d1cf40a9ca8c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:6dc0b3fd2169c9157deed50b4d519553a3655c8c6a96027136d654592be973a9" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:7e65d5407dc0b394f509699650e4a2ec01c0514f21850f453fa60f3be79a5dbf" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:f8894dc474d648fe7b6ff0ca9b0bd73950d19952bc1a6534540762c5d79d305c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-win_amd64.whl", hash = "sha256:c7be265b62cef88e253a941e4698604973736dcfe242fdb5198f0f7bc473cdcc" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp312-cp312-win_arm64.whl", hash = "sha256:557409bc4178e70ee8d9ddb494798e51ebf6ea59330f6be22c51bab2a7db6c49" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:67b3b64c11910cfa29f4e94a14d3bff9ee693b6fc76055e7cad549cee0aec5fa" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:39436b377d56d2a2e52d0395bdbee171f01068e99af5250509aceeb929f765c7" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:d4be06d68f9ddcfc645b87534911da79a8fbffc7573c80e0edcf42a5020624d8" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a4eeb6830daf35a71cc09649bd823e2b542dac246cdee9614c6e4bd65028cd6a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:1928e07221f82db493cd4af1e23c1bfca524a19a4699887975bff68f49a72bfb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:51b1fe551acb77dac643c6fda86084d8d446c10fe64b06a9cc29c4cc8540e7f2" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-win_amd64.whl", hash = "sha256:a82d532a3351d435432cd913edbccaf8b8e01d4dd0e5ced5a8d2e8ecd94c7e44" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313-win_arm64.whl", hash = "sha256:275c14e0fce14a2ec20eee474aecd305478ea3c1e6f6a9d8fe219a165542717e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:46997386d528eb40376ecd6b033cf4a8a1e5282580f68f43de875b78cba2199d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:261e308dfb22448384b7580cf719d2f998fe2966c92893c3e77d14008af1f066" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:dd1a5d1def6a46002e964510bdc67c368aa0951df5d1d9f8365336f5a1f490cd" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:d72828c20c6d6e83e1e22a6a3b47b326b71664112fa9705dcbccfd7a39b62085" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:d26cbe1fcfc12e8fd900e2454163e466b2d3af84f7c75481df7683ffc073d870" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:3e91cec1879ada0624fc3dc9953c5cbd60208e59c0db28f540c5d6d47502422f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp313-cp313t-win_amd64.whl", hash = "sha256:08d789b41f87e0905880e293cedf6197ce71fe67cc081358b1e148a491b9bd13" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:3650109c0f22879df8bd6179ab9ee3d7f1d1d4e7e0094a3f0032d9f51e2e64ac" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:bab900348131a7db1f69a7309ef141fd5680f1487094193bcbbb61791573bf8f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:ba7e08b9ac1d54569cd1e256e3668975ed624d6826f7b68df0342b012007bddb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9d71c63ae4ebdbf70209742096f1fc46a83a0613c99d4b23766cced9ff8cd62a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:e3a2ec42c98ffa2565a67e08e218d06d72576d758d90facb7c00805194d8f360" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:335f62418ed562cfc3c49e9e196375c28b729dcef8543abf4f9438e381bf3c76" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-win_amd64.whl", hash = "sha256:3c20a521bbb85902f79f7270c80a59e1b5452d96d170c034f207181870f97ac5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314-win_arm64.whl", hash = "sha256:a2d2dff8a04f3917b55ab3910c32990f8ddf7eceba114947838cefa976a68977" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:0d589105b3c14645af1738ff279b2995102d8f7a03b0a66dc8d95550eb513e04" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:13fc1e853d9e04743d11ba75a985ccbc2a317fe07d8af61e445a6fd24dacd6a6" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:819959dab7bbd0049c15623fbac4e29a191b9528160a61fb1032242d8ced2d9c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:60ae316d3fd75d1858d450d0db0103ea2be3e7d4a95ec2f064f7e2ae63f7b028" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:bd3a518890b400d32f9023722dc9a9a5c969f00b415419a3c06c043f09bb5d7d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:9c39be2d709d01fa972a0cabc522389fceca4f3969332ba25a7d6c5802cf976a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-win_amd64.whl", hash = "sha256:4db8c527972a821cf5286b40ccc57642a39bc62e62022b42f99f8a67fca8c3a1" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pandas/3.0.3/pandas-3.0.3-cp314-cp314t-win_arm64.whl", hash = "sha256:b2c95f8bfc1ee412bf482605d7bfd30c12d1d26bd59fdd91efeef1d4718decb1" },
 ]
 
 [[package]]
@@ -3100,6 +3441,127 @@ wheels = [
 ]
 
 [[package]]
+name = "pynput"
+version = "1.8.2"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "evdev", marker = "'linux' in sys_platform" },
+    { name = "pyobjc-framework-applicationservices", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-quartz", marker = "sys_platform == 'darwin'" },
+    { name = "python-xlib", marker = "'linux' in sys_platform" },
+    { name = "six" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pynput/1.8.2/pynput-1.8.2.tar.gz", hash = "sha256:f493c87157cd3861b4468f7f896857051762f44ed26f1b641e7cc5840a457087" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pynput/1.8.2/pynput-1.8.2-py2.py3-none-any.whl", hash = "sha256:8cc38cf13a6ab2749cb375678be8a0fd705d7ce49c8001ff5db4007a723bbef1" },
+]
+
+[[package]]
+name = "pynvml"
+version = "13.0.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "nvidia-ml-py" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pynvml/13.0.1/pynvml-13.0.1.tar.gz", hash = "sha256:1245991d9db786b4d2f277ce66869bd58f38ac654e38c9397d18f243c8f6e48f" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pynvml/13.0.1/pynvml-13.0.1-py3-none-any.whl", hash = "sha256:e2b20e0a501eeec951e2455b7ab444759cf048e0e13a57b08049fa2775266aa8" },
+]
+
+[[package]]
+name = "pyobjc-core"
+version = "12.2.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1.tar.gz", hash = "sha256:7a7b9b018402342cf32bf1956366896350fbe5c0478cb3ef59778f77abed7f07" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:a64232bb27ed101d4adc7d42b0e64a6d3331aac7bee7861c037a6777a163f10b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:af101222762665a4125157906cb4b23f5d5a63d3851d5e0504f72a1eaaa2cfd2" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:efe465e3ecc6fc73f7c7622620345d134a8d34564ab1c29d8247e45f4ed55071" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:2b8fc0531c27277325e113ac00b8a72a82e6145f0a88175b9425d8de814ff69a" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:9bef500f979e22d54f9da3aaebf6a48f873234b324858bd69256055a318955c7" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp315-cp315-macosx_10_15_universal2.whl", hash = "sha256:047c226eeb58a2993ace5e8904e71cc9426ee20d064c617f8fbf32717d37093e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-core/12.2.1/pyobjc_core-12.2.1-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:1188613805336270279570467e4455b74cb6c0f60913ac74c917ee1c37cfaecb" },
+]
+
+[[package]]
+name = "pyobjc-framework-applicationservices"
+version = "12.2.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-cocoa", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-coretext", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-quartz", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1.tar.gz", hash = "sha256:048ea663c9ac75c44a15dc7d5b8d78cbb4c97bf1c76e83835e8d5498e184001f" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:f519ced13888d03410cd7da1f08fc56ee2944099e607216cef7ca26ecfdef61b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:8749290f796e6cca341d443769b79329dde5d157bcc4413c1f7fdb68ea4a8e48" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:9ee11677fbd6a0987234814c7dde88ffd11242e8c1f76952e6654ea07f2370ac" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:a1c0ee536cb8bd7f5a811165ec323a9207b1e8dad9534fe2081f767fb90b0411" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:0d55dd5be19e4a1363662bc8b48894d45714d07f0ee3958665fc9ea7df0f61b7" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp315-cp315-macosx_10_15_universal2.whl", hash = "sha256:e91c84238b2f68f608473854bcabb8770f15ad837e7561d217f24a1e482e42be" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-applicationservices/12.2.1/pyobjc_framework_applicationservices-12.2.1-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:09bfa27765d4c74155323fd8185b7aba6d639ce06c0a9f00ee2d9e7dce3d7800" },
+]
+
+[[package]]
+name = "pyobjc-framework-cocoa"
+version = "12.2.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1.tar.gz", hash = "sha256:b94b37fe5730e5ae1fb0052912cd174e6ec329b0bfba4a012ae5db1014b5864b" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:28b9b8bab1c36efb94744786918752d0c1842f5fbb67e7d5ca97b5f736512080" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:3b74a78fa7803e547b32e5e8ec1b49987b52fe318383e793bc6cd49b80efbd9f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:dc2eaca2f13c7bcd8e41e51a372e47825dea9dd3126108760eed7ba883d2945c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:b386c324d64ae565c1f6b7dfb77be68f640a1c7c23caa6966ab661131f519561" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:a6c584e2af0813cb2f6103b184e632665a26f58c1bd5b08ffd6e95a19c617f7b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp315-cp315-macosx_10_15_universal2.whl", hash = "sha256:b6023657b8d6cc049a21bd6b4752425f2f53c42f9f0b02d64c7608cc484bf103" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-cocoa/12.2.1/pyobjc_framework_cocoa-12.2.1-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:c685ccd8e266a07cf912a2c5a13b1f2eff2a868a1aff163b4801b4687bd425e1" },
+]
+
+[[package]]
+name = "pyobjc-framework-coretext"
+version = "12.2.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-cocoa", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-quartz", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1.tar.gz", hash = "sha256:af740e784d7c592c34025ec7165f4f6c1a69b5a2d9075f06e41e4f77c212aed2" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:ac2ead13dfa4379a1566129d0e8a8ea778a2bcac9ac360a583360fd4f1ba39c6" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:5c5a3c6e2d905a17efb15572dad97ce582feeab5c3b92537015445e0e0bb46de" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:5c979058c77df8cd3dac5fd7db4c484f9886fbe09e2687bfaf269a856f631f78" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:d0b3b0467a23dbc2a39d0839e7100cc98b429fb7d52a471bd65477f46bb4c9e5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:3d4a92fa657180cd0e900b98535da4f0f4d8c76a7077730a507e50d52d2853e3" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp315-cp315-macosx_10_15_universal2.whl", hash = "sha256:7a17034fd0a08cf58323b7234a385ce0ec355509d414df69e3f8f88df26de1fc" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-coretext/12.2.1/pyobjc_framework_coretext-12.2.1-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:28980144af75598654f6997b2bbb427885f4f5df90aa4d840f452ba5778ab155" },
+]
+
+[[package]]
+name = "pyobjc-framework-quartz"
+version = "12.2.1"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "pyobjc-framework-cocoa", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1.tar.gz", hash = "sha256:b3b8b6f71e66147f8ff9e6213864cc8527e3a0b1ee90835b93ce221f4802d9b0" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:de9c8cca7e95290c8d540466af11c7cdfe3a5458e6f56c34006d5b45243f9ed9" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:54c9bc7f507192691841ee4eba5bf36990b259df83ac728efed2d7ea1cd021e4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:bfc0d2badd819823d21df8069dcf9544ce360ed747a8895c51bdb25d8d125f45" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:ceb56939c337b36d9d81185ade31f77dc52c85cf79bb16e53e9b32f54b6bb3f5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp314-cp314t-macosx_10_15_universal2.whl", hash = "sha256:8105c98b798f2bf81c05c54bddeeadbf62f0b5dfec13bd6e719dd2cdf7e1cddf" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp315-cp315-macosx_10_15_universal2.whl", hash = "sha256:bbc214f1a216b5d3651bc832d0ac4589f029f3f37cd6cbb370aac12a7c77942c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/pyobjc-framework-quartz/12.2.1/pyobjc_framework_quartz-12.2.1-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:ca61624a0b0e6286d8a0f97f47eb9011e4e81e9a339db436d48af527e7065bb1" },
+]
+
+[[package]]
 name = "pyperclip"
 version = "1.11.0"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -3172,6 +3634,27 @@ wheels = [
 ]
 
 [[package]]
+name = "python-engineio"
+version = "4.13.3"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "simple-websocket" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/python-engineio/4.13.3/python_engineio-4.13.3.tar.gz", hash = "sha256:572b7783e341fed21edbc7cea297ccd378dad79265fdde96aa4664420a7c06c9" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/python-engineio/4.13.3/python_engineio-4.13.3-py3-none-any.whl", hash = "sha256:1f60ecaf1358190f0e26c48c578a60428dc02a8f1295bc3dbf53d1b31116821f" },
+]
+
+[[package]]
+name = "python-json-logger"
+version = "4.1.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/python-json-logger/4.1.0/python_json_logger-4.1.0.tar.gz", hash = "sha256:b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/python-json-logger/4.1.0/python_json_logger-4.1.0-py3-none-any.whl", hash = "sha256:132994765cf75bf44554be9aa49b06ef2345d23661a96720262716438141b6b2" },
+]
+
+[[package]]
 name = "python-markdown"
 version = "0.1.0"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -3204,12 +3687,37 @@ wheels = [
 ]
 
 [[package]]
+name = "python-socketio"
+version = "5.16.3"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "bidict" },
+    { name = "python-engineio" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/python-socketio/5.16.3/python_socketio-5.16.3.tar.gz", hash = "sha256:89b136f677ae65607a84cecda9b4d6c5377b40a97582c504c25df89af16d520e" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/python-socketio/5.16.3/python_socketio-5.16.3-py3-none-any.whl", hash = "sha256:e7ad14202a5e6448824c7c2f86161d04e13dec05992257df5c709e6a2798c041" },
+]
+
+[[package]]
 name = "python-socks"
 version = "2.8.2"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/python-socks/2.8.2/python_socks-2.8.2.tar.gz", hash = "sha256:ffc493951854fa3fc0551e0434a09a7b9f9047f9ad666dce42cb94a52e8a34b6" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/python-socks/2.8.2/python_socks-2.8.2-py3-none-any.whl", hash = "sha256:7cf785d0631e0659384a773b3c402bc22cccdc23894ba1d65f8524748ace1193" },
+]
+
+[[package]]
+name = "python-xlib"
+version = "0.33"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/python-xlib/0.33/python-xlib-0.33.tar.gz", hash = "sha256:55af7906a2c75ce6cb280a584776080602444f75815a7aff4d287bb2d7018b32" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/python-xlib/0.33/python_xlib-0.33-py2.py3-none-any.whl", hash = "sha256:c3534038d42e0df2f1392a1b30a15a4ff5fdc2b86cfa94f072bf11b10a164398" },
 ]
 
 [[package]]
@@ -3492,8 +4000,8 @@ name = "secretstorage"
 version = "3.5.0"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 dependencies = [
-    { name = "cryptography", marker = "sys_platform != 'win32'" },
-    { name = "jeepney", marker = "sys_platform != 'win32'" },
+    { name = "cryptography", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
+    { name = "jeepney", marker = "(python_full_version >= '3.13' and sys_platform == 'emscripten') or (sys_platform != 'emscripten' and sys_platform != 'win32')" },
 ]
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/secretstorage/3.5.0/secretstorage-3.5.0.tar.gz", hash = "sha256:f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be" }
 wheels = [
@@ -3516,6 +4024,18 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/shellingham/1.5.4/shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/shellingham/1.5.4/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686" },
+]
+
+[[package]]
+name = "simple-websocket"
+version = "1.1.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "wsproto" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/simple-websocket/1.1.0/simple_websocket-1.1.0.tar.gz", hash = "sha256:7939234e7aa067c534abdab3a9ed933ec9ce4691b0713c78acb195560aa52ae4" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/simple-websocket/1.1.0/simple_websocket-1.1.0-py3-none-any.whl", hash = "sha256:4af6069630a38ed6c561010f0e11a5bc0d4ca569b36306eb257cd9a192497c8c" },
 ]
 
 [[package]]
@@ -3564,6 +4084,43 @@ source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
 sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/socksio/1.0.0/socksio-1.0.0.tar.gz", hash = "sha256:f88beb3da5b5c38b9890469de67d0cb0f9d494b78b106ca1845f96c10b91c4ac" }
 wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/socksio/1.0.0/socksio-1.0.0-py3-none-any.whl", hash = "sha256:95dc1f15f9b34e8d7b16f06d74b8ccf48f609af32ab33c608d08761c5dcbb1f3" },
+]
+
+[[package]]
+name = "sounddevice"
+version = "0.5.5"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "cffi" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5.tar.gz", hash = "sha256:22487b65198cb5bf2208755105b524f78ad173e5ab6b445bdab1c989f6698df3" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5-py3-none-any.whl", hash = "sha256:30ff99f6c107f49d25ad16a45cacd8d91c25a1bcdd3e81a206b921a3a6405b1f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5-py3-none-macosx_10_6_x86_64.macosx_10_6_universal2.whl", hash = "sha256:05eb9fd6c54c38d67741441c19164c0dae8ce80453af2d8c4ad2e7823d15b722" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5-py3-none-win32.whl", hash = "sha256:1234cc9b4c9df97b6cbe748146ae0ec64dd7d6e44739e8e42eaa5b595313a103" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5-py3-none-win_amd64.whl", hash = "sha256:cfc6b2c49fb7f555591c78cb8ecf48d6a637fd5b6e1db5fec6ed9365d64b3519" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/sounddevice/0.5.5/sounddevice-0.5.5-py3-none-win_arm64.whl", hash = "sha256:3861901ddd8230d2e0e8ae62ac320cdd4c688d81df89da036dcb812f757bb3e6" },
+]
+
+[[package]]
+name = "soundfile"
+version = "0.14.0"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "cffi" },
+    { name = "numpy" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0.tar.gz", hash = "sha256:ba1c1a2d618bca5c406647c83b89f07cc8810fa506a50622a6993ba130c1de11" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-any.whl", hash = "sha256:8ba81ae3a89fd5ab3bef8a8eb481fbbe794e806309675a89b4df48b8d31908a8" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-macosx_10_9_x86_64.whl", hash = "sha256:19be05428da76ed61a4cad29b8e4bcf43a3e5c100089d2ec81dc961eed1b0dd4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:d828d35a059626da52f1415b5faee610aeab393319cb3fc4a9aef47b619fc14c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:e85724a90bc99a6e8062c0b4ddf725f53b2a3b70afd4da875e9d2cfc4e92f377" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:1e38bac1853412871318e82a1ba69a8be677619b56025bbfcccdb41b6cafe82d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-win32.whl", hash = "sha256:0a6ae43c50c71b4e020cc55382925cb89451c1ed1a0c3d0f5d802da269226849" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-win_amd64.whl", hash = "sha256:299491d3499460fb1b74bb4bd78b57ffc2d243a5fafa7b6ec1b264875c78453e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/soundfile/0.14.0/soundfile-0.14.0-py2.py3-none-win_arm64.whl", hash = "sha256:e090704718e124e7c844695236f1fce8d18a5e761eaf7c82dfcd124620805f98" },
 ]
 
 [[package]]
@@ -3986,9 +4543,11 @@ source = { virtual = "." }
 dependencies = [
     { name = "aiocron" },
     { name = "aiofiles" },
+    { name = "aiosqlite" },
     { name = "anthropic" },
     { name = "apscheduler" },
     { name = "argparse" },
+    { name = "asyncio" },
     { name = "behave" },
     { name = "cryptography" },
     { name = "ddgs" },
@@ -3997,21 +4556,33 @@ dependencies = [
     { name = "fastapi" },
     { name = "faster-whisper" },
     { name = "fastmcp" },
+    { name = "flask" },
+    { name = "flask-cors" },
+    { name = "flask-socketio" },
+    { name = "flask-sqlalchemy" },
+    { name = "gevent" },
+    { name = "gevent-websocket" },
     { name = "gguf" },
     { name = "gitpython" },
+    { name = "gunicorn" },
     { name = "httpx" },
     { name = "itsdangerous" },
     { name = "jinja2" },
     { name = "kubernetes" },
     { name = "langdetect" },
+    { name = "lask" },
+    { name = "lmstudio" },
     { name = "markdown" },
     { name = "matrix-nio", extra = ["e2e"] },
     { name = "mcp" },
     { name = "mysql-connector-python" },
+    { name = "numpy" },
     { name = "openai" },
+    { name = "opencv-python-headless" },
     { name = "opentelemetry-exporter-otlp-proto-grpc" },
     { name = "opentelemetry-sdk" },
     { name = "packaging" },
+    { name = "pandas" },
     { name = "paramiko" },
     { name = "pip" },
     { name = "playwright" },
@@ -4019,21 +4590,29 @@ dependencies = [
     { name = "prometheus-client" },
     { name = "prompt-toolkit" },
     { name = "pydantic" },
+    { name = "pynput" },
+    { name = "pynvml" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
+    { name = "python-dateutil" },
     { name = "python-dotenv" },
+    { name = "python-json-logger" },
     { name = "python-markdown" },
     { name = "python-multipart" },
+    { name = "python-socketio" },
     { name = "pyyaml" },
     { name = "questionary" },
     { name = "requests" },
     { name = "rich" },
     { name = "ruff" },
+    { name = "sounddevice" },
+    { name = "soundfile" },
     { name = "spacy" },
     { name = "sqlalchemy" },
     { name = "sqlmodel" },
     { name = "sse-starlette" },
+    { name = "starlette" },
     { name = "textual" },
     { name = "textual-dev" },
     { name = "tqdm" },
@@ -4046,9 +4625,11 @@ dependencies = [
 requires-dist = [
     { name = "aiocron" },
     { name = "aiofiles" },
+    { name = "aiosqlite" },
     { name = "anthropic" },
     { name = "apscheduler" },
     { name = "argparse" },
+    { name = "asyncio" },
     { name = "behave" },
     { name = "cryptography" },
     { name = "ddgs" },
@@ -4057,21 +4638,33 @@ requires-dist = [
     { name = "fastapi" },
     { name = "faster-whisper" },
     { name = "fastmcp" },
+    { name = "flask" },
+    { name = "flask-cors" },
+    { name = "flask-socketio" },
+    { name = "flask-sqlalchemy" },
+    { name = "gevent" },
+    { name = "gevent-websocket" },
     { name = "gguf" },
     { name = "gitpython" },
+    { name = "gunicorn" },
     { name = "httpx" },
     { name = "itsdangerous" },
     { name = "jinja2" },
     { name = "kubernetes" },
     { name = "langdetect" },
+    { name = "lask" },
+    { name = "lmstudio" },
     { name = "markdown" },
     { name = "matrix-nio", extras = ["e2e"] },
     { name = "mcp" },
     { name = "mysql-connector-python" },
+    { name = "numpy" },
     { name = "openai" },
+    { name = "opencv-python-headless" },
     { name = "opentelemetry-exporter-otlp-proto-grpc" },
     { name = "opentelemetry-sdk" },
     { name = "packaging" },
+    { name = "pandas" },
     { name = "paramiko" },
     { name = "pip" },
     { name = "playwright" },
@@ -4079,21 +4672,29 @@ requires-dist = [
     { name = "prometheus-client" },
     { name = "prompt-toolkit" },
     { name = "pydantic" },
+    { name = "pynput" },
+    { name = "pynvml" },
     { name = "pyright" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
+    { name = "python-dateutil" },
     { name = "python-dotenv" },
+    { name = "python-json-logger" },
     { name = "python-markdown" },
     { name = "python-multipart" },
+    { name = "python-socketio" },
     { name = "pyyaml" },
     { name = "questionary" },
     { name = "requests" },
     { name = "rich" },
     { name = "ruff" },
+    { name = "sounddevice" },
+    { name = "soundfile" },
     { name = "spacy" },
     { name = "sqlalchemy" },
     { name = "sqlmodel" },
     { name = "sse-starlette" },
+    { name = "starlette" },
     { name = "textual" },
     { name = "textual-dev" },
     { name = "tqdm" },
@@ -4364,6 +4965,18 @@ wheels = [
 ]
 
 [[package]]
+name = "werkzeug"
+version = "3.1.8"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "markupsafe" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/werkzeug/3.1.8/werkzeug-3.1.8.tar.gz", hash = "sha256:9bad61a4268dac112f1c5cd4630a56ede601b6ed420300677a869083d70a4c44" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/werkzeug/3.1.8/werkzeug-3.1.8-py3-none-any.whl", hash = "sha256:63a77fb8892bf28ebc3178683445222aa500e48ebad5ec77b0ad80f8726b1f50" },
+]
+
+[[package]]
 name = "wrapt"
 version = "2.2.2"
 source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
@@ -4425,6 +5038,18 @@ wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/wrapt/2.2.2/wrapt-2.2.2-cp314-cp314t-win_amd64.whl", hash = "sha256:d09db0f7e8357060d3c38fc22a018aba683a796bf184360fd1a58f6fc180dc77" },
     { url = "http://localhost:8081/repository/pypi-proxy/packages/wrapt/2.2.2/wrapt-2.2.2-cp314-cp314t-win_arm64.whl", hash = "sha256:f32fe639c39561ccc187bcae17e9271be0eb45f1c2952510d2f29b33ab577347" },
     { url = "http://localhost:8081/repository/pypi-proxy/packages/wrapt/2.2.2/wrapt-2.2.2-py3-none-any.whl", hash = "sha256:5bad217350f19ce99ca5b5e71d406765ea86fe541628426772b657375ee1c048" },
+]
+
+[[package]]
+name = "wsproto"
+version = "1.3.2"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+dependencies = [
+    { name = "h11" },
+]
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/wsproto/1.3.2/wsproto-1.3.2.tar.gz", hash = "sha256:b86885dcf294e15204919950f666e06ffc6c7c114ca900b060d6e16293528294" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/wsproto/1.3.2/wsproto-1.3.2-py3-none-any.whl", hash = "sha256:61eea322cdf56e8cc904bd3ad7573359a242ba65688716b0710a5eb12beab584" },
 ]
 
 [[package]]
@@ -4507,4 +5132,48 @@ wheels = [
     { url = "http://localhost:8081/repository/pypi-proxy/packages/yarl/1.24.2/yarl-1.24.2-cp314-cp314t-win_amd64.whl", hash = "sha256:a7624b1ca46ca5d7b864ef0d2f8efe3091454085ee1855b4e992314529972215" },
     { url = "http://localhost:8081/repository/pypi-proxy/packages/yarl/1.24.2/yarl-1.24.2-cp314-cp314t-win_arm64.whl", hash = "sha256:e434a45ce2e7a947f951fc5a8944c8cc080b7e59f9c50ae80fd39107cf88126d" },
     { url = "http://localhost:8081/repository/pypi-proxy/packages/yarl/1.24.2/yarl-1.24.2-py3-none-any.whl", hash = "sha256:2783d9226db8797636cd6896e4de81feed252d1db72265686c9558d97a4d94b9" },
+]
+
+[[package]]
+name = "zope-event"
+version = "6.2"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-event/6.2/zope_event-6.2.tar.gz", hash = "sha256:b97d5d6327067ee6b9dfcbdf606ade9ade70991e19c162e808ea39e5fcf0f8d3" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-event/6.2/zope_event-6.2-py3-none-any.whl", hash = "sha256:5e755153ac4faf64c10a4b6dd3307680166a3edf65b38df22df592610f8fa874" },
+]
+
+[[package]]
+name = "zope-interface"
+version = "8.5"
+source = { registry = "http://localhost:8081/repository/pypi-proxy/simple" }
+sdist = { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5.tar.gz", hash = "sha256:7a3ba1c5877f0f3e3906b02ddf793abed2becc2948116414ce0e1dd820b68d6d" }
+wheels = [
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:8e6ee90c2e6de7c37058d5fa41f123c8b13a312db8d1e0fb5840d7f4bcdff9c9" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c1adc90d3576b3b4c4de4953e6002c37bef28b78d7fa54c1bbfd0c50f022fe7c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-manylinux1_i686.manylinux2014_i686.manylinux_2_17_i686.manylinux_2_5_i686.whl", hash = "sha256:e6347b8d8d12c5eca6502450a92be30079b7acfade2c4f693efa0deb8871b06e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:5e970dabea777a24b0b0bbf9dae3ab75ce8b2d8e948edf4875627034b21f3560" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:f0b48ccadaa9839e09ff81e969703cecb3f402c813bfe8b958652e699bea69f5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-win_amd64.whl", hash = "sha256:e0e311f1277468c08fd59a2b41f71b43d25dff639789d364747acd1705c0df6e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp312-cp312-win_arm64.whl", hash = "sha256:652b73107a04159ec6c020db6c1543d4f1e8f4d069bd2aac88a947820923517b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-macosx_10_9_x86_64.whl", hash = "sha256:28e80457c134d1fa57a7d758004dece348654e1b1467ac22dcdc20fc1d127c52" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:09495ce9d559c06b70f2d4855b3e4f48a822a9ddc8be1d30c5b4e5be14ae1ace" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-manylinux1_i686.manylinux2014_i686.manylinux_2_17_i686.manylinux_2_5_i686.whl", hash = "sha256:7849ad8fa90763cc1087f4dda78ca3a233e950b3e08fac7079297c9cafbbd7bb" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:5578c9421ca409a1f39f153d6f7803e4cde01da592ec75a9ac5e1b777d18d33b" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:e1bd7d96b4ca5fa311f54c9eac16dce4886b428c1531dbe06067763ccdf123b4" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-win_amd64.whl", hash = "sha256:0c8123d2a4dfde2a613c7cb772605477724782c20bc2e0ad1d9435376a6a44a3" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp313-cp313-win_arm64.whl", hash = "sha256:6d02be14f3173c6c7288bc2fdf530090c01c3cf8764ad46c68024686f364278e" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-macosx_10_9_x86_64.whl", hash = "sha256:ffaecf013251a89d0de6feb49a46eba48ad8cbbf8a40aeb6045e459e7bec6784" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:126fa9d1c52295ae076d4cf968634f0a1826afa408a20808b57ff72877b8f69f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-manylinux1_i686.manylinux2014_i686.manylinux_2_17_i686.manylinux_2_5_i686.whl", hash = "sha256:3090e3a663d20194756a59a272e0c8508b889341e31d5894223331fe6b4f9b21" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:9342fb74e2afefdb081bf1df727d209ea56995c6e13f5a0540e6d7aff4beafb8" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:6c54725d818f1b57a7efb8b16528326e1f3c257b602b32393fd255c45af8799d" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-win_amd64.whl", hash = "sha256:29d74febbae1afeb6834c4ccbf42e242a673c860060f09e53142825270456140" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314-win_arm64.whl", hash = "sha256:633c8c49396f38df030340797c533e9fe460d1b5d1e42d88e55e938e525f548c" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-macosx_10_9_x86_64.whl", hash = "sha256:133999820fdbae513c36c03d6f29ef87317aaa3edef39112222b155083664714" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:8bd75c96966e573232f0599deaff717564828031c7f05563ccc1ac35c5ee0304" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-manylinux1_i686.manylinux2014_i686.manylinux_2_17_i686.manylinux_2_5_i686.whl", hash = "sha256:14b0e9799351d4c34fe99afd67f0cdd76e55ba15c66a98699d5fc22ea8241e08" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:0cd6a732ac84b94eb1ef9222a117347a27efd294ee16810ffdf7ecd307677ed5" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:798b7c87d0e59a7d5d086d642208d0d8700ff0d55c4029134b3c479c3bfb110f" },
+    { url = "http://localhost:8081/repository/pypi-proxy/packages/zope-interface/8.5/zope_interface-8.5-cp314-cp314t-win_amd64.whl", hash = "sha256:0fc3a9d45f114d27eaa1e53beeb144533689edca8a9f66505b1e8e8b3f075e42" },
 ]
