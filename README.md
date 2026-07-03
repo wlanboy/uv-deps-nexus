@@ -123,10 +123,26 @@ im Zielverzeichnis) werden übersprungen.
 | `zielverzeichnis` | `.` | Verzeichnis, in das geklont wird |
 | `projects.txt` | `projects.txt` | Datei mit einer Repository-URL pro Zeile (Leerzeilen und Zeilen mit `#` werden ignoriert) |
 
+### `projects.txt` erzeugen (`gh`)
+
+Mit der [GitHub CLI](https://cli.github.com/) (`gh`, vorher `gh auth login`) lässt
+sich `projects.txt` aus den eigenen Python-Repositories generieren:
+
+```bash
+gh repo list <github-user> --language Python --limit 1000 \
+  --json url,isArchived --jq '.[] | select(.isArchived==false) | .url' \
+  > projects.txt
+```
+
 Typischer Ablauf, um den Nexus-Cache mit möglichst vielen Paketen zu befüllen:
 
 ```bash
+gh repo list <github-user> --language Python --limit 1000 \
+  --json url,isArchived --jq '.[] | select(.isArchived==false) | .url' \
+  > projects.txt
 ./clone.sh ~/gittest projects.txt
 uv run main.py --root ~/gittest
 uv sync
+
+uv run python.py --root ~/gittest --version 3.14  
 ```
