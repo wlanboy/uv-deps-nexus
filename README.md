@@ -20,8 +20,36 @@ Installiert alle in `pyproject.toml` deklarierten Abhängigkeiten in die lokale 
 
 ## Ausführen
 
+`main.py` durchsucht rekursiv ein Verzeichnis (Standard: `~/git`) nach
+uv-Projekten (erkannt an `uv.lock` oder einer `[tool.uv]`-Sektion in der
+`pyproject.toml`), sammelt deren Dependencies (inkl. `optional-dependencies`
+und `dependency-groups`) und übernimmt die Paketnamen (ohne
+Versions-Constraints, um Auflösungskonflikte zwischen Projekten zu vermeiden)
+in die `dependencies`-Liste dieses Projekts. Ein anschließendes `uv sync`
+lädt damit alle Pakete über den Nexus-Proxy und füllt so dessen Cache.
+
 ```bash
 uv run main.py
+```
+
+Optionen:
+
+| Flag | Standard | Bedeutung |
+|------|----------|-----------|
+| `--root PFAD` | `~/git` | Verzeichnis, das nach uv-Projekten durchsucht wird |
+| `--pyproject PFAD` | `pyproject.toml` dieses Projekts | Ziel-`pyproject.toml`, in die die Dependencies geschrieben werden |
+| `--dry-run` | aus | Zeigt nur an, was geändert würde, ohne zu schreiben |
+
+Beispiel mit anderem Suchpfad:
+
+```bash
+uv run main.py --root /pfad/zu/anderen/projekten --dry-run
+```
+
+Danach den Cache tatsächlich befüllen:
+
+```bash
+uv sync
 ```
 
 ## Nexus als Package-Proxy
