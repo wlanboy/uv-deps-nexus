@@ -94,3 +94,27 @@ default = true
 Da `default = true` gesetzt ist, verwendet `uv` **ausschließlich** Nexus als
 Quelle – es erfolgt kein Fallback auf das offizielle PyPI. Ist der Nexus-Server
 nicht erreichbar, schlagen `uv sync`, `uv add` und `uv lock` fehl.
+
+## Projekte klonen (`clone.sh`)
+
+`clone.sh` klont alle in `projects.txt` gelisteten GitHub-Repositories nach
+`~/git`, damit `main.py` möglichst viele uv-Projekte zum Sammeln der
+Dependencies vorfindet. Bereits vorhandene Repos (erkannt am `.git`-Ordner
+im Zielverzeichnis) werden übersprungen.
+
+```bash
+./clone.sh [zielverzeichnis] [projects.txt]
+```
+
+| Argument | Standard | Bedeutung |
+|----------|----------|-----------|
+| `zielverzeichnis` | `.` | Verzeichnis, in das geklont wird |
+| `projects.txt` | `projects.txt` | Datei mit einer Repository-URL pro Zeile (Leerzeilen und Zeilen mit `#` werden ignoriert) |
+
+Typischer Ablauf, um den Nexus-Cache mit möglichst vielen Paketen zu befüllen:
+
+```bash
+./clone.sh ~/gittest projects.txt
+uv run main.py --root ~/gittest
+uv sync
+```
