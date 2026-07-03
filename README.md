@@ -1,0 +1,68 @@
+# uv
+
+Nexus Python Cache Filler – installiert eine breite Menge gängiger
+Python-Pakete über [uv](https://docs.astral.sh/uv/), um den Nexus-PyPI-Proxy
+vorzuwärmen (Cache-Füllung), statt eine eigenständige Anwendung
+bereitzustellen.
+
+## Voraussetzungen
+
+- Python 3.12 (siehe `.python-version`)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+## Setup
+
+```bash
+uv sync
+```
+
+Installiert alle in `pyproject.toml` deklarierten Abhängigkeiten in die lokale `.venv`.
+
+## Ausführen
+
+```bash
+uv run main.py
+```
+
+## Nexus als Package-Proxy
+
+Alle Python-Pakete werden nicht direkt von PyPI, sondern über einen internen
+Nexus-Proxy (`pypi-proxy`) bezogen. Das reduziert die Abhängigkeit von
+externen Servern, beschleunigt wiederholte Installationen durch Caching und
+erlaubt eine zentrale Kontrolle über erlaubte Pakete.
+
+Konfiguriert wird das in `pyproject.toml`:
+
+```toml
+[[tool.uv.index]]
+name = "nexus"
+url = "http://localhost:8081/repository/pypi-proxy/simple"
+default = true
+```
+
+- `name` – Bezeichner des Index, wird u. a. in Log-Ausgaben von `uv` verwendet.
+- `url` – Simple-Index-Endpunkt des Nexus-Repositories vom Typ `pypi-proxy`.
+- `default = true` – ersetzt den Standard-Index (PyPI) vollständig, d. h.
+  `uv add`/`uv sync`/`uv lock` lösen alle Pakete ausschließlich über Nexus auf.
+
+### Voraussetzungen für die Nutzung
+
+- Ein erreichbarer Nexus-Server mit einem PyPI-Proxy-Repository unter
+  `http://localhost:8081/repository/pypi-proxy/simple` (Adresse ggf. anpassen,
+  falls Nexus nicht lokal läuft, z. B. via VPN/Tunnel oder abweichender
+  Host/Port-Kombination).
+- Falls das Repository nicht anonym lesbar ist, müssen Zugangsdaten hinterlegt
+  werden, z. B. über Umgebungsvariablen:
+
+  ```bash
+  export UV_INDEX_NEXUS_USERNAME=<username>
+  export UV_INDEX_NEXUS_PASSWORD=<password>
+  ```
+
+  (`NEXUS` entspricht hier dem großgeschriebenen `name` aus der Index-Definition.)
+
+### Verhalten bei Sync/Lock
+
+Da `default = true` gesetzt ist, verwendet `uv` **ausschließlich** Nexus als
+Quelle – es erfolgt kein Fallback auf das offizielle PyPI. Ist der Nexus-Server
+nicht erreichbar, schlagen `uv sync`, `uv add` und `uv lock` fehl.
