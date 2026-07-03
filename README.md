@@ -18,6 +18,18 @@ uv sync
 
 Installiert alle in `pyproject.toml` deklarierten Abhängigkeiten in die lokale `.venv`.
 
+### Bekanntes Problem: `python-olm` Build schlägt fehl (CMake ≥ 4)
+
+`matrix-nio[e2e]` zieht `python-olm` nach, das `libolm` per CMake baut.
+`libolm`s `CMakeLists.txt` setzt ein sehr altes `cmake_minimum_required`, das
+von CMake 4.x nicht mehr akzeptiert wird (`Compatibility with CMake < 3.5 has
+been removed`). Da `main.py` die Dependency-Liste aus anderen Projekten
+generiert, lässt sich das nicht dauerhaft in `pyproject.toml` fixen. Workaround:
+
+```bash
+CMAKE_POLICY_VERSION_MINIMUM=3.5 uv sync
+```
+
 ## Ausführen
 
 `main.py` durchsucht rekursiv ein Verzeichnis (Standard: `~/git`) nach
